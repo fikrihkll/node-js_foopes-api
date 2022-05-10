@@ -14,4 +14,8 @@ const router = require('./routes/router.js');
 
 app.use('/api', router);
 
-app.listen(port, () => console.log(`SERVER running on port ${port}`)); 
+if(process.env.DB_NAME){
+    app.listen(); 
+}else{
+    app.listen(port, () => console.log(`SERVER running on port ${port}`)); 
+}
