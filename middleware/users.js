@@ -59,11 +59,9 @@ module.exports = {
         }catch(e){
             return res.status(400).send(
                 responseModel.responseModel.normalResponse(
-                    responseModel.responseModel.normalResponse(
-                        false,
-                        "session is over",
-                        {}
-                    )
+                    false,
+                    "session is over",
+                    {}
                 )
             );
         }

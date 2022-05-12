@@ -45,7 +45,7 @@ const login = (req, res, next) => {
                         token,
                         {
                             httpOnly: true,
-                            secure: process.env.NODE_ENV === 'prod' || envDummy.NODE_ENV === 'prod'
+                            secure: process.env.NODE_ENV === 'production' || envDummy.NODE_ENV === 'prod'
                         }
                      )
                     .status(200).send(
